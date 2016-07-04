@@ -1,0 +1,4 @@
+var Dashboard = {
+init:function() {
+}
+};

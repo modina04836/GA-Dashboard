@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+
+<script src="module1.js"></script>
+<script src="module2.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
+
+function init() {
+	
+}
+
+function init() {
+	
+}
+
+var Module1 = {
+	init: function() {
+		Module1.init({
+
+		});
+		Module2.init();
+		this.refresh();
+	},
+	refresh: function() {
+		setInteval(function(){
+			Module1.refresh();
+			Module2.refresh();
+		}, 2000);
+	}
+};
+
+var Dashboard = {
+	init: function() {
+		Module1.init({
+
+		});
+		Module2.init();
+		this.refresh();
+	},
+	refresh: function() {
+		setInteval(function(){
+			Module1.refresh();
+			Module2.refresh();
+		}, 2000);
+	}
+};
+
+$(document).ready(function(){
+	Dashboard.init();
+});
