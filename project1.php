@@ -26,20 +26,20 @@
 <div class="one" name="news" id="chart-news1-container"></div>
 <div class="one" name="news" id="chart-news2-container"></div>
 <div class="one" name="news" id="chart-news3-container"></div>
-<div class="one" name="news" id="chart-news4-container"></div> -->
-
-<div class="one"  name="ent" id="chart-ent-container"></div>	
+<div class="one" name="news" id="chart-news4-container"></div>
+ -->
+<!-- <div class="one"  name="ent" id="chart-ent-container"></div>	
 <div class="one"  name="ent" id="chart-ent1-container"></div>
 <div class="one"  name="ent" id="chart-ent2-container"></div>
 <div class="one"  name="ent" id="chart-ent3-container"></div>
 <div class="one"  name="ent" id="chart-ent4-container"></div>
+ -->
 
-
-<!-- <div class="one" name="third" id="chart-third-container"></div>	
+<div class="one" name="third" id="chart-third-container"></div>	
 <div class="one" name="third" id="chart-third1-container"></div>
 <div class="one" name="third" id="chart-third2-container"></div>
 <div class="one" name="third" id="chart-third3-container"></div>
-<div class="one" name="third" id="chart-third4-container"></div> -->
+<div class="one" name="third" id="chart-third4-container"></div>
 
 </div>
 

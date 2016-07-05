@@ -91,7 +91,7 @@ gapi.analytics.ready(function() {
       ids: '80198607',
 
       metrics: 'ga:sessions',
-      dimensions: 'ga:userType',
+      dimensions: 'ga:deviceCategory',
       'start-date': 'yesterday',
       'end-date': 'today',
       'max-results': 6,
@@ -102,7 +102,7 @@ gapi.analytics.ready(function() {
       type: 'TABLE',
       options: {
         width: '100%',
-        pieHole: 4/9
+        tableHole: 4/9
       }
     }
   });

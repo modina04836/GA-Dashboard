@@ -92,7 +92,7 @@ gapi.analytics.ready(function() {
       ids: '123835343',
 
       metrics: 'ga:sessions',
-      dimensions: 'ga:mobileDeviceBranding',
+      dimensions: 'ga:deviceCategory',
       'start-date': 'yesterday',
       'end-date': 'today',
       'max-results': 6,
@@ -100,10 +100,10 @@ gapi.analytics.ready(function() {
     },
     chart: {
       container: 'chart-ent3-container',
-      type: 'PIE',
+      type: 'TABLE',
       options: {
         width: '100%',
-        pieHole: 4/9
+        tableHole: 4/9
       }
     }
   });
