@@ -1,4 +1,9 @@
-
+(function(w,d,s,g,js,fs){
+  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
+  js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+  js.src='https://apis.google.com/js/platform.js';
+  fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+}(window,document,'script'));
 
 gapi.analytics.ready(function() {
 
@@ -7,11 +12,14 @@ gapi.analytics.ready(function() {
    * If no access has been created, render an authorize button inside the
    * element with the ID "embed-api-auth-container".
    */
+
   gapi.analytics.auth.authorize({
+
     container: 'embed-api-auth-container',
     clientid: '403771359085-kqk8d8i52reqrjeoi1h3vmpuuc6818c9.apps.googleusercontent.com'
   });
 
+  
 
   /**
    * Create a new ViewSelector instance to be rendered inside of an
@@ -35,14 +43,14 @@ gapi.analytics.ready(function() {
     query: {
       ids: '124990353',
 
-      metrics: 'ga:users',
-      dimensions: 'ga:userType',
+      metrics: 'ga:pageviews',
+      dimensions: 'ga:hostname',
       'start-date': 'yesterday',
       'end-date': 'today'
     },
     chart: {
       container: 'chart-third-container',
-      type: 'LINE',
+      type: 'TABLE',
       options: {
         width: '100%'
       }
@@ -127,6 +135,44 @@ gapi.analytics.ready(function() {
       }
     }
   });
+  var dataChartthird5 = new gapi.analytics.googleCharts.DataChart({
+    query: {
+      ids: '124990353',
+      
+      metrics: 'ga:sessions',
+      dimensions: 'ga:day',
+      'start-date': 'yesterday',
+      'end-date': 'today',
+      'max-results': 6,
+      sort: '-ga:sessions'
+    },
+    chart: {
+      container: 'chart-third5-container',
+      type: 'TABLE',
+      options: {
+        width: '100%',
+      }
+    }
+  });
+  var dataChartthird6 = new gapi.analytics.googleCharts.DataChart({
+    query: {
+      ids: '124990353',
+      
+      metrics: 'ga:sessions',
+      dimensions: 'ga:month',
+      'start-date': 'yesterday',
+      'end-date': 'today',
+      'max-results': 6,
+      sort: '-ga:sessions'
+    },
+    chart: {
+      container: 'chart-third6-container',
+      type: 'TABLE',
+      options: {
+        width: '100%',
+      }
+    }
+  });
 
 
   /**
@@ -138,7 +184,6 @@ gapi.analytics.ready(function() {
     dataChartthird2.set({query: {ids: 'ga:124990353'}}).execute();
     dataChartthird3.set({query: {ids: 'ga:124990353'}}).execute();
     dataChartthird4.set({query: {ids: 'ga:124990353'}}).execute();
-  });
-
-
-
+    dataChartthird5.set({query: {ids: 'ga:124990353'}}).execute();
+    dataChartthird6.set({query: {ids: 'ga:124990353'}}).execute();
+});
