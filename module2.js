@@ -1,3 +1,9 @@
+(function(w,d,s,g,js,fs){
+  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
+  js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+  js.src='https://apis.google.com/js/platform.js';
+  fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+}(window,document,'script'));
 
 gapi.analytics.ready(function() {
 
@@ -28,22 +34,23 @@ gapi.analytics.ready(function() {
   /**
    * Create a new DataChart instance with the given query parameters
    * and Google chart options. It will be rendered inside an element
-   * with the id "chart-container".
+   * with the id "chart-container". 
    */
   var dataChartent = new gapi.analytics.googleCharts.DataChart({
     query: {
       ids: '123835343',
 
-      metrics: 'ga:users',
-      dimensions: 'ga:userType',
+      metrics: 'ga:pageviews',
+      dimensions: 'ga:hostname',
       'start-date': 'yesterday',
       'end-date': 'today'
     },
     chart: {
       container: 'chart-ent-container',
-      type: 'LINE',
+      type: 'TABLE',
       options: {
-        width: '100%'
+      width: '100%',
+      tableHole: 4/9
       }
     }
   });
@@ -62,8 +69,8 @@ gapi.analytics.ready(function() {
       container: 'chart-ent1-container',
       type: 'PIE',
       options: {
-        width: '100%',
-        pieHole: 4/9
+      width: '100%',
+      pieHole: 4/9
       }
     }
   });
@@ -82,7 +89,7 @@ gapi.analytics.ready(function() {
       container: 'chart-ent2-container',
       type: 'BAR',
       options: {
-        width: '100%',
+      width: '100%',
       }
     }
   });
@@ -92,7 +99,7 @@ gapi.analytics.ready(function() {
       ids: '123835343',
 
       metrics: 'ga:sessions',
-      dimensions: 'ga:mobileDeviceBranding',
+      dimensions: 'ga:deviceCategory',
       'start-date': 'yesterday',
       'end-date': 'today',
       'max-results': 6,
@@ -100,10 +107,10 @@ gapi.analytics.ready(function() {
     },
     chart: {
       container: 'chart-ent3-container',
-      type: 'PIE',
+      type: 'TABLE',
       options: {
-        width: '100%',
-        pieHole: 4/9
+      width: '100%',
+      tableHole: 4/9
       }
     }
   });
@@ -122,7 +129,7 @@ gapi.analytics.ready(function() {
       container: 'chart-ent4-container',
       type: 'BAR',
       options: {
-        width: '100%',
+      width: '100%',
       }
     }
   });
