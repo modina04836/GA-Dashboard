@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<a href="http://localhost/firstproject/ga-dashboard/project3.php">Project3</a>
+<a href="http://localhost/proj/project3.php">Project3</a>
 
 <div id="embed-api-auth-container"> </div>
 <input type="hidden" id="view-selector-container"></input>
