@@ -1,0 +1,140 @@
+.container {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.one {
+	border:0px solid black;
+	float: left;
+	width: 70%;
+	height: 90%;
+}
+.two {	
+	float: left;
+	font-size: 15px;
+}
+.three {
+	border:0px solid black;
+	float: left;
+	width: 33%;
+	height: 300px;
+}
+.four {
+	border:1px solid black;
+	float: left;
+	width: 33%;
+	height: 300px;
+}
+.container1 {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.container2 {
+	display: inline-block;
+	width: 100%;
+	height: 500px;
+}
+#countries{
+	width: 100%;
+}
+#chart-Rev{
+	float: left;
+	width: 49%;
+}
+#chart-Rev2{
+	float: right;
+	width: 49%;
+}
+.ActiveUsers {
+  background:hsl(30,10%,95%);
+  border:1px solid #d4d2d0;
+  border-radius: 4px;
+  font-weight: 300;
+  padding:.5em 1.5em;
+  white-space: nowrap;
+}
+
+.ActiveUsers-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-right: -.25em;
+}
+
+.ActiveUsers.is-increasing {
+  -webkit-animation: increase 3s;
+          animation: increase 3s;
+}
+
+.ActiveUsers.is-decreasing {
+  -webkit-animation: decrease 3s;
+          animation: decrease 3s;
+}
+
+@-webkit-keyframes increase {
+  10% {
+    background-color: hsl(120,100%,96%);
+    border-color: hsla(120, 100%, 25%, .5);
+    color: hsla(120, 100%, 25%, 1);
+  }
+}
+
+@keyframes increase {
+  10% {
+    background-color: hsl(120,100%,96%);
+    border-color: hsla(120, 100%, 25%, .5);
+    color: hsla(120, 100%, 25%, 1);
+  }
+}
+
+@-webkit-keyframes decrease {
+  10% {
+    background-color: hsl(0,100%,96%);
+    border-color: hsla(0, 100%, 50%, .5);
+    color: hsl(0,100%,50%);
+  }
+}
+
+@keyframes decrease {
+  10% {
+    background-color: hsl(0,100%,96%);
+    border-color: hsla(0, 100%, 50%, .5);
+    color: hsl(0,100%,50%);
+  }
+}
+
+.Chartjs {
+  font-size: .85em;
+}
+
+.Chartjs-figure {
+  height: 250px;
+}
+
+.Chartjs-legend {
+  list-style: none;
+  margin: 0;
+  padding: 1em 0 0;
+  text-align: center;
+}
+
+.Chartjs-legend > li {
+  display: inline-block;
+  padding: .25em .5em
+}
+
+.Chartjs-legend > li > i {
+  display: inline-block;
+  height: 1em;
+  margin-right: .5em;
+  vertical-align: -.1em;
+  width: 1em;
+}
+
+@media (min-width: 570px) {
+  .Chartjs-figure {
+    /* Add some breathing room. */
+    margin-right:1.5em;
+  }
+}
